@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "filemaker-maxi-web",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Maxithlon Marathon",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
