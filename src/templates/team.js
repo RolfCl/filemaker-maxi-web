@@ -9,7 +9,7 @@ const myStyle = {
 const TeamTemplate = props => {
 
 	const team = props.pageContext;
-	console.log(props.pageContext);
+
 	return (
 		<React.Fragment>
 			<div className="row">
