@@ -43,12 +43,11 @@ const LeagueTemplate = props => {
 					</tbody>
 				</table>
 				<h3 className="mt-4">About</h3>
-				<p>This web site is a result of a test of the static web site generator <a href="https://www.gatsbyjs.org">Gatsby</a>. 
-				All information are from the online game <a href="https://www.maxithlon.com/?r=11791">Maxithlon</a>.</p>
-				<p>XML from Maxithlon is fetched once a week by FileMaker, a low-code, rapid development database tool. The data is processed in FileMaker, 
-					and uploaded to Github as json files. Every week 17 files are uploaded to Github, one for the total table and one for each team currently
-					in the Golden League.</p>
-					<p>The upload triggers a rebuild of all html files, hosted by <a href="https://www.netlify.com">Netlify</a>.</p>
+				<p>This site is a test of <a href="https://www.gatsbyjs.org">Gatsby</a>, a static web site generator. 
+				All information is from the online game <a href="https://www.maxithlon.com/?r=11791">Maxithlon</a>.</p>
+				<p>XML from Maxithlon is fetched once a week by <a href="https://www.claris.com/filemaker/">FileMaker</a>, a low-code, rapid development database tool. 
+				The data is processed in FileMaker, and uploaded to <a href="https://github.com">Github</a> as json files.</p>
+				<p>The upload triggers a rebuild of static html files, hosted by <a href="https://www.netlify.com">Netlify</a>.</p>
 			</div>
 		</div>
 	</React.Fragment>
