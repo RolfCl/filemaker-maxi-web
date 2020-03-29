@@ -50,6 +50,11 @@ const LeagueTemplate = props => {
 				<p>The upload triggers a rebuild of static html files, hosted by <a href="https://www.netlify.com">Netlify</a>.</p>
 			</div>
 		</div>
+		<div id="reff"></div>
+		<script>
+			var ref=escape(document.referrer);
+			document.getElementById('reff').innerHTML='<img SRC="https://counter2.mallverkstan.net/host.php?kundnr=1095&sida=GL&ref='+ref+'"/>';
+		</script>
 	</React.Fragment>
 	)
 }
