@@ -23,6 +23,7 @@ exports.createPages = ({ actions }) => {
       component: teamTemplate,
       context: {
         ...team,
+        currentseason: leagueData.currentseason,
         teamData: JSON.parse(fs.readFileSync('./content/team_' + team.teamid + '.json', { encoding: 'utf-8' }))
       },
     });

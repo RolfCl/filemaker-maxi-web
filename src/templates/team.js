@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Dump from '@wesbos/dump';
 
 const myStyle = {
 	fontWeight: 'bold',
@@ -8,13 +9,14 @@ const myStyle = {
  
 const TeamTemplate = props => {
 
+	// <Dump data={props} />
 	const team = props.pageContext;
 
 	return (
 		<React.Fragment>
 			<div className="row">
 				<div className="col">
-
+				
 					<h1>{team.teamname}</h1>
 					<table className="table table-striped table-sm ">
 						<thead>
@@ -34,7 +36,7 @@ const TeamTemplate = props => {
 							}
 							return <tr key={season.season}>
 								<td className="text-left">{season.season}</td>
-								<td style={classTR} className="text-right">{season.position === 1 && season.season != 74? 'Winner' : season.position}</td>
+								<td style={classTR} className="text-right">{season.position === 1 && season.season != team.currentseason ? 'Winner' : season.position}</td>
 								<td className="text-right">{season.points}</td>
 								<td className="text-right">{season.eventscores}</td>
 							</tr>

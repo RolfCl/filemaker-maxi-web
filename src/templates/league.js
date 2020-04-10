@@ -14,7 +14,6 @@ const LeagueTemplate = props => {
 	<React.Fragment>
 		<div className="row">
 			<div className="col">
-			
 				<h1>International Golden League</h1>
 				<p>Season 29-{leagueData.currentseason}. Updated: {leagueData.timestamp}</p>
 
@@ -31,13 +30,15 @@ const LeagueTemplate = props => {
 					<tbody>
 					{leagueData.league.map((data, index) => {
 						let classTR = {};
-						if (data.lastseason === 74) {
+						if (data.lastseason === leagueData.currentseason) {
 							classTR = myStyle;
 						}
 						return <tr key={`${index}`}>
 									<td style={classTR}>{`${index+1}`}</td>
-									<td style={classTR}><Link  to={`/team/${data.teamid}`}>
-										<img src={`https://www.maxithlon.com/common/images/flags/16/${data.flag}`} />&nbsp;&nbsp;{data.teamname}</Link></td>
+									<td style={classTR}>
+										<img src={`https://www.maxithlon.com/common/images/flags/16/${data.flag}`} />&nbsp;&nbsp;
+										<Link to={`/team/${data.teamid}`}>{data.teamname}</Link>
+									</td>
 									<td style={classTR} className="text-right">{data.seasons}</td>
 									<td style={classTR} className="text-right">{data.points}</td>
 									<td style={classTR} className="text-right">{data.eventscores}</td>
