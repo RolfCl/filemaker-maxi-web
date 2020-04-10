@@ -1,18 +1,20 @@
 import React from "react"
 import { Link } from 'gatsby';
+import Dump from '@wesbos/dump'
 
 const myStyle = {
   fontWeight: 'bold',
 };
 
 const LeagueTemplate = props => {
-
+//<Dump data={props} />
 	const leagueData = props.pageContext.leagueData;
 
 	return (
 	<React.Fragment>
 		<div className="row">
 			<div className="col">
+			
 				<h1>International Golden League</h1>
 				<p>Season 29-{leagueData.currentseason}. Updated: {leagueData.timestamp}</p>
 
@@ -34,7 +36,8 @@ const LeagueTemplate = props => {
 						}
 						return <tr key={`${index}`}>
 									<td style={classTR}>{`${index+1}`}</td>
-									<td style={classTR}><Link  to={`/team/${data.teamid}`}>{data.teamname}</Link></td>
+									<td style={classTR}><Link  to={`/team/${data.teamid}`}>
+										<img src={`https://www.maxithlon.com/common/images/flags/16/${data.flag}`} />&nbsp;&nbsp;{data.teamname}</Link></td>
 									<td style={classTR} className="text-right">{data.seasons}</td>
 									<td style={classTR} className="text-right">{data.points}</td>
 									<td style={classTR} className="text-right">{data.eventscores}</td>
