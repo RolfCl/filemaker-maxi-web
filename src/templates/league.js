@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from 'gatsby';
-import Dump from '@wesbos/dump'
 
 const myStyle = {
   fontWeight: 'bold',
@@ -23,6 +22,7 @@ const LeagueTemplate = props => {
 							<th></th>
 							<th className="text-left">Team</th>
 							<th className="text-right">Seasons</th>
+							<th className="text-right">Wins</th>
 							<th className="text-right">Points</th>
 							<th className="text-right">Event scores</th>
 						</tr>
@@ -40,6 +40,7 @@ const LeagueTemplate = props => {
 										<Link to={`/team/${data.teamid}`}>{data.teamname}</Link>
 									</td>
 									<td style={classTR} className="text-right">{data.seasons}</td>
+									<td style={classTR} className="text-right">{data.wins == 0 ? '' : data.wins}</td>
 									<td style={classTR} className="text-right">{data.points}</td>
 									<td style={classTR} className="text-right">{data.eventscores}</td>
 								</tr>
@@ -52,13 +53,10 @@ const LeagueTemplate = props => {
 				<p>XML from Maxithlon is fetched once a week by <a href="https://www.claris.com/filemaker/">FileMaker</a>, a low-code, rapid development database tool. 
 				The data is processed in FileMaker, and uploaded to <a href="https://github.com">Github</a> as json files.</p>
 				<p>The upload triggers a rebuild of static html files, hosted by <a href="https://www.netlify.com">Netlify</a>.</p>
+				<p><i>First version: 2020-03-23</i><br/><i>Last update: 2023-01-21</i></p>
 			</div>
 		</div>
-		<div id="reff"></div>
-		<script>
-			var ref=escape(document.referrer);
-			document.getElementById('reff').innerHTML='<img SRC="https://counter2.mallverkstan.net/host.php?kundnr=1095&sida=GL&ref='+ref+'"/>';
-		</script>
+		<img src="https://counter2.mallverkstan.net/host.php?kundnr=1095&sida=GL"/>
 	</React.Fragment>
 	)
 }
