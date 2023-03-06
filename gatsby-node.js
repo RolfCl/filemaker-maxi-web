@@ -9,11 +9,33 @@ exports.createPages = ({ actions }) => {
   const leagueTemplate = path.resolve('src/templates/league.js');
   const teamTemplate = path.resolve('src/templates/team.js');
 
+  const winnerData = JSON.parse(fs.readFileSync('./content/winners.json', { encoding: 'utf-8' }));
+  const winnerTemplate = path.resolve('src/templates/winners.js');
+
+  const last10Data = JSON.parse(fs.readFileSync('./content/league10.json', { encoding: 'utf-8' }));
+  const last10Template = path.resolve('src/templates/league10.js');
+
   createPage({
     path: '/',
     component: leagueTemplate,
     context: {
       leagueData
+    },
+  });
+
+  createPage({
+    path: '/winners',
+    component: winnerTemplate,
+    context: {
+      winnerData
+    },
+  });
+
+  createPage({
+    path: '/last10',
+    component: last10Template,
+    context: {
+      last10Data
     },
   });
 
