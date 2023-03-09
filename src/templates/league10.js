@@ -15,7 +15,7 @@ const Last10Template = props => {
 			<div className="col">
 				<h1>International Golden League</h1>
                 <h2>Last 10 seasons</h2>
-				<p>Season 29-{last10Data.currentseason}. Updated: {last10Data.timestamp}</p>
+				<p>Season {`${last10Data.currentseason-9}`}-{last10Data.currentseason}. Updated: {last10Data.timestamp}</p>
 
 				<table className="table table-striped table-sm ">
 					<thead>

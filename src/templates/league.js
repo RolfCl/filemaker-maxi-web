@@ -53,7 +53,10 @@ const LeagueTemplate = props => {
 				<p>XML from Maxithlon is fetched once a week by <a href="https://www.claris.com/filemaker/">FileMaker</a>, a low-code, rapid development database tool. 
 				The data is processed in FileMaker, and uploaded to <a href="https://github.com">Github</a> as json files.</p>
 				<p>The upload triggers a rebuild of static html files, hosted by <a href="https://www.netlify.com">Netlify</a>.</p>
-				<p><i>First version: 2020-03-23</i><br/><i>Last update: 2023-01-21</i></p>
+				<p>
+                    <i>First version: 2020-03-23</i><br/>
+                    <i>Added last 10 seasons and all winners: 2023-03-06</i>
+                </p>
 			</div>
 		</div>
 		<img src="https://counter2.mallverkstan.net/host.php?kundnr=1095&sida=GL"/>
