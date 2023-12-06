@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Maxithlon Marathon",
-  "author": "RolfCl", 
+  "author": "RolfCl",
   "keywords": [
     "gatsby"
   ],
@@ -15,10 +15,9 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^5.12.11",
+    "gatsby": "^5.12.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "gatsby-source-filesystem": "^2.11.1"
+    "gatsby-source-filesystem": "^5.12.0"
   }
 }
-
