@@ -1,33 +1,24 @@
 {
   "name": "filemaker-maxi-web",
+  "version": "1.0.0",
   "private": true,
   "description": "Maxithlon Marathon",
-  "version": "0.1.0",
-  "license": "MIT",
+  "author": "RolfCl",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
-    "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "dependencies": {
-    "@wesbos/dump": "^0.1.1",
-    "gatsby": "^2.19.45",
-    "gatsby-source-filesystem": "^2.2.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
-  },
-  "devDependencies": {
-    "prettier": "^1.19.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "gatsby": "^5.4.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "gatsby-source-filesystem": "^2.2.2"
   }
 }
+
